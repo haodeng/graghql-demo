@@ -1,0 +1,14 @@
+type Query {
+    postById(id: ID): Post
+}
+
+type Post {
+    id: ID
+    subject: String
+    user: User
+}
+
+type User {
+    id: ID
+    name: String
+}

@@ -24,3 +24,32 @@ As an example, the app will have to make one request to the /users endpoint and 
 
 ## Benefits of a Schema & Type System
 GraphQL uses a strong type system to define the capabilities of an API. All the types that are exposed in an API are written down in a schema using the GraphQL Schema Definition Language (SDL). This schema serves as the contract between the client and the server to define how a client can access the data.
+
+# Demo
+* run app
+* postman: POST http://localhost:8080/graphql, body choose GraghQL
+
+        {
+        postById(id: "p1"){
+            id
+            subject
+            user {
+                name
+            }
+        }
+        }
+        
+Response:
+
+    {
+        "data": {
+            "postById": {
+                "id": "p1",
+                "subject": "test1",
+                "user": {
+                    "id": "u1",
+                    "name": "hao"
+                }
+            }
+        }
+    }
